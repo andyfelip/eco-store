@@ -23,8 +23,35 @@ body{
 
 .navbar{
     background-color: $color-primary;
-    width: 100%;
-    height: 135px;
+    width: auto;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    color: $text-primary-color;
+    padding: 15px;
+    p{
+       font-size: 30px; 
+       line-height: 39px;
+       color: $text-primary-color; 
+       font-style: normal;
+       font-weight: 500;
+       padding-left: 30px;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        button{
+            background: none;
+            border-style: none;
+            svg {
+                stroke: $text-primary-color;
+                width: 36px;
+                height: 36px;
+            }
+        }            
+    }
+
 }
 
 
