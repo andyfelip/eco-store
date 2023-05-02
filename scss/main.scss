@@ -1,0 +1,44 @@
+//Definicion de Variables globales de color y tipografia 
+
+$color-primary: #FFEFE7; 
+$color-secundary: #FFDAC6; 
+$color-terciary: #BABD8D; 
+$text-primary-color: #7C6A0A; 
+$color-footer-container: #FA9500; 
+$color-text-map: #E86424; 
+$font-stack: 'IBM Plex Sans',
+sans-serif;
+
+
+//Definicion de estilos del body de la pagina
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: $color-primary;
+    font-family: $font-stack;
+}
+
+//definicion de estilos del navbar de la pagina web
+
+.navbar{
+    background-color: $color-primary;
+    width: 100%;
+    height: 135px;
+}
+
+
+//definicion estilos de los main section 
+
+.main-section{
+    width: 100%;
+    height: auto;
+}
+
+//definicion de estilos del footer
+
+.footer{
+    background-color: $color-footer-container;
+    width: 100%;
+    height: 461px;
+}
