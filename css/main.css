@@ -1,12 +1,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #FFEFE7;
+  background-color: rgb(255, 239, 231);
   font-family: "IBM Plex Sans", sans-serif;
 }
 
 .navbar {
-  background-color: #FFEFE7;
+  background-color: rgb(255, 239, 231);
   width: auto;
   display: flex;
   flex-direction: row;
