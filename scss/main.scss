@@ -1,70 +1,210 @@
 //Definicion de Variables globales de color y tipografia 
 
-$color-primary: rgba(255, 239, 231, 1); 
-$color-secundary: #FFDAC6; 
-$color-terciary: #BABD8D; 
-$text-primary-color: #7C6A0A; 
-$color-footer-container: #FA9500; 
-$color-text-map: rgba(232, 100, 36, 1); 
+$color-primary: rgba(255, 239, 231, 1);
+$color-secundary: #FFDAC6;
+$color-terciary: #BABD8D;
+$text-primary-color: #7C6A0A;
+$color-footer-container: #FA9500;
+$color-text-map: rgba(232, 100, 36, 1);
 $font-stack: 'IBM Plex Sans',
-sans-serif;
+    sans-serif;
+$paragraph-size: 1.5em;
 
 
 //Definicion de estilos del body de la pagina
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     background-color: $color-primary;
     font-family: $font-stack;
+
+
 }
 
 //definicion de estilos del navbar de la pagina web
 
-.navbar{
+.navbar {
     background-color: $color-primary;
     width: auto;
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: $text-primary-color;
-    padding: 15px;
-    p{
-       font-size: 30px; 
-       line-height: 39px;
-       color: $text-primary-color; 
-       font-style: normal;
-       font-weight: 500;
-       padding-left: 30px;
+    padding: 20px;
+
+    p {
+        font-size: 30px;
+        line-height: 39px;
+        color: $text-primary-color;
+        font-style: normal;
+        font-weight: 500;
+        padding-left: 90px;
     }
-    .icons{
+
+    .icons {
         display: flex;
         flex-direction: row;
-        gap: 15px;
-        button{
+        gap: 10px;
+        margin-right: 90px;
+
+        button {
             background: none;
             border-style: none;
+
             svg {
                 stroke: $text-primary-color;
                 width: 36px;
                 height: 36px;
             }
-        }            
+        }
     }
 
 }
 
+article {
+
+    width: auto;
+    background-color: $color-primary;
+    color: $text-primary-color;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    gap: 10px;
+    padding-top: 80px;
+    justify-content: space-around;
+    column-gap: 200px;
+
+    .impact-section {
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+
+        h1 {
+            font-size: $font-stack;
+            font-size: 3em;
+            padding-top: 50px;
+            margin: 0;
+
+        }
+
+        p {
+            font-size: $paragraph-size;
+        }
+
+        button {
+            background-color: $color-footer-container;
+            width: 261px;
+            height: 73px;
+            border-radius: 35px;
+            color: $color-primary;
+            font-size: 22.99px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+    }
+
+    .image-section {
+        background-color: $color-primary;
+
+        img {
+            width: 25vw;
+            border-radius: 19px;
+            cursor: pointer;
+
+        }
+    }
+}
+
+
 
 //definicion estilos de los main section 
 
-.main-section{
-    width: 100%;
+section {
+    width: auto; 
     height: auto;
+    padding: 40px;
+
+    h2 {
+        color: $text-primary-color;
+        font-size: 2em;
+        font-family: $font-stack;
+    }
+
+    .healthcare {
+        h2 {
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+
+        .card-section {
+            display: flex;
+            width: auto;
+            height: auto;
+            .product-card {
+                width: 15vw;
+                height: auto;
+                background-color: $color-secundary;
+                color: $text-primary-color;
+                padding: 20px;
+                border-radius: 8px;
+
+                .product-image {
+                    width: 100%;
+                    height: auto; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 16vw;
+                        height: 30vh;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+
+                }
+
+                .icon{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-left: 15px;
+                    padding-top:1px;
+                    padding-bottom: 10px;
+
+                    svg{
+                        width: 25px;
+                        height: 25px;
+                        stroke: $text-primary-color;
+                    }
+
+                }
+
+
+
+                
+
+                
+
+
+
+            }
+
+        }
+
+
+    }
 }
+
 
 //definicion de estilos del footer
 
-.footer{
+.footer {
     background-color: $color-footer-container;
     width: 100%;
     height: 461px;
