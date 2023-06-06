@@ -48,9 +48,11 @@ body {
         gap: 10px;
         margin-right: 90px;
 
+
         button {
             background: none;
             border-style: none;
+            cursor: pointer;
 
             svg {
                 stroke: $text-primary-color;
@@ -58,6 +60,17 @@ body {
                 height: 36px;
             }
         }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        display: flex;
+        gap: 20px;
+        width: 100vw;
+        justify-content: end;
+        color: $text-primary-color;
+        padding: 20px;
+
     }
 
 }
@@ -76,18 +89,15 @@ article {
     column-gap: 200px;
 
     .impact-section {
-
         display: flex;
         flex-direction: column;
         row-gap: 40px;
-
 
         h1 {
             font-size: $font-stack;
             font-size: 3em;
             padding-top: 50px;
             margin: 0;
-
         }
 
         p {
@@ -104,7 +114,6 @@ article {
             padding: 20px;
             cursor: pointer;
         }
-
     }
 
     .image-section {
@@ -117,14 +126,89 @@ article {
 
         }
     }
+
+    @media only screen and (max-width: 600px) {
+
+        width: 100vw;
+        height: auto;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+
+        .image-section {
+
+            justify-items: center;
+            margin-left: -10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            margin-bottom: -20px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80vw;
+                border-radius: 15px;
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-clip: border-box;
+            }
+
+
+
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        width: 100vw;
+        height: auto;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+        justify-content: center;
+        align-items: center;
+
+        .impact-section {
+            margin-left: 70px;
+        }
+
+        .image-section {
+
+            justify-items: center;
+            margin-left: 40px;
+            margin-right: 10px;
+            margin-top: 20px;
+            margin-bottom: -20px;
+            padding: 20px;
+
+            img {
+                width: 80vw;
+                border-radius: 15px;
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-clip: border-box;
+            }
+
+
+        }
+    }
+
 }
+
 
 
 
 //definicion estilos de los main section 
 
 section {
-    width: auto; 
+    width: auto;
     height: auto;
     padding: 40px;
 
@@ -135,15 +219,29 @@ section {
     }
 
     .healthcare {
+        padding-bottom: 60px;
+
         h2 {
             font-weight: 300;
             padding-bottom: 60px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h2 {
+                text-align: center;
+            }
         }
 
         .card-section {
             display: flex;
             width: auto;
             height: auto;
+            justify-content: center;
+            align-items: center;
+            column-gap: 200px;
+            row-gap: 80px;
+            flex-wrap: wrap;
+
             .product-card {
                 width: 15vw;
                 height: auto;
@@ -152,9 +250,10 @@ section {
                 padding: 20px;
                 border-radius: 8px;
 
+
                 .product-image {
                     width: 100%;
-                    height: auto; 
+                    height: auto;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -165,42 +264,94 @@ section {
                         object-fit: cover;
                         border-radius: 6px;
                     }
-
                 }
 
-                .icon{
+                .icon {
                     width: 100%;
                     height: auto;
                     display: flex;
                     justify-content: flex-end;
                     padding-left: 15px;
-                    padding-top:1px;
+                    padding-top: 1px;
                     padding-bottom: 10px;
 
-                    svg{
+                    svg {
                         width: 25px;
                         height: 25px;
                         stroke: $text-primary-color;
                     }
 
                 }
+            }
 
+            @media only screen and (max-width: 1180px) {
 
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                height: auto;
+                display: inline-flex;
+                flex-direction: row;
+                column-gap: 70px;
+                row-gap: 25px;
 
-                
-
-                
-
-
+                .product-card {
+                    width: 30vw;
+                }
 
             }
+
+
+
+            @media only screen and (max-width: 600px) {
+                display: grid;
+                grid-template-columns: 1px;
+                width: auto;
+                height: auto;
+                justify-content: flex-start;
+                color: $text-primary-color;
+                padding: 20px;
+                margin-left: 20px;
+                row-gap: 20px;
+
+                h3 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                    width: 70vw;
+                }
+
+                .product-card {
+
+                    width: 70vw;
+                    height: auto;
+
+                    .product-image {
+                        width: 65vw;
+                        padding-left: 10px;
+
+                        img {
+                            width: 100vw;
+                        }
+                    }
+                }
+            }
+
+
+
+
+
 
         }
 
 
-    }
-}
 
+
+    }
+
+}
 
 //definicion de estilos del footer
 

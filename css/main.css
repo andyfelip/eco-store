@@ -31,11 +31,22 @@ body {
 .navbar .icons button {
   background: none;
   border-style: none;
+  cursor: pointer;
 }
 .navbar .icons button svg {
   stroke: #7C6A0A;
   width: 36px;
   height: 36px;
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    gap: 20px;
+    width: 100vw;
+    justify-content: end;
+    color: #7C6A0A;
+    padding: 20px;
+  }
 }
 
 article {
@@ -83,6 +94,67 @@ article .image-section img {
   border-radius: 19px;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  article {
+    width: 100vw;
+    height: auto;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+  }
+  article .image-section {
+    justify-items: center;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  article .image-section img {
+    width: 80vw;
+    border-radius: 15px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-clip: border-box;
+  }
+}
+@media only screen and (max-width: 800px) {
+  article {
+    width: 100vw;
+    height: auto;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  article .impact-section {
+    margin-left: 70px;
+  }
+  article .image-section {
+    justify-items: center;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 20px;
+  }
+  article .image-section img {
+    width: 80vw;
+    border-radius: 15px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-clip: border-box;
+  }
+}
 
 section {
   width: auto;
@@ -94,14 +166,28 @@ section h2 {
   font-size: 2em;
   font-family: "IBM Plex Sans", sans-serif;
 }
+section .healthcare {
+  padding-bottom: 60px;
+}
 section .healthcare h2 {
   font-weight: 300;
   padding-bottom: 60px;
+}
+@media only screen and (max-width: 600px) {
+  section .healthcare h2 {
+    text-align: center;
+  }
 }
 section .healthcare .card-section {
   display: flex;
   width: auto;
   height: auto;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  row-gap: 80px;
+  flex-wrap: wrap;
 }
 section .healthcare .card-section .product-card {
   width: 15vw;
@@ -138,6 +224,53 @@ section .healthcare .card-section .product-card .icon svg {
   width: 25px;
   height: 25px;
   stroke: #7C6A0A;
+}
+@media only screen and (max-width: 1180px) {
+  section .healthcare .card-section {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    row-gap: 25px;
+  }
+  section .healthcare .card-section .product-card {
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section .healthcare .card-section {
+    display: grid;
+    grid-template-columns: 1px;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    color: #7C6A0A;
+    padding: 20px;
+    margin-left: 20px;
+    row-gap: 20px;
+  }
+  section .healthcare .card-section h3 {
+    text-align: center;
+  }
+  section .healthcare .card-section p {
+    text-align: center;
+    width: 70vw;
+  }
+  section .healthcare .card-section .product-card {
+    width: 70vw;
+    height: auto;
+  }
+  section .healthcare .card-section .product-card .product-image {
+    width: 65vw;
+    padding-left: 10px;
+  }
+  section .healthcare .card-section .product-card .product-image img {
+    width: 100vw;
+  }
 }
 
 .footer {
