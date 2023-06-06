@@ -300,9 +300,6 @@ section {
                 }
 
             }
-
-
-
             @media only screen and (max-width: 600px) {
                 display: grid;
                 grid-template-columns: 1px;
@@ -349,6 +346,10 @@ section {
 
 
 
+    }
+
+    .furniture{
+        @extend .healthcare;
     }
 
 }

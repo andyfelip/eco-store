@@ -166,19 +166,19 @@ section h2 {
   font-size: 2em;
   font-family: "IBM Plex Sans", sans-serif;
 }
-section .healthcare {
+section .healthcare, section .furniture {
   padding-bottom: 60px;
 }
-section .healthcare h2 {
+section .healthcare h2, section .furniture h2 {
   font-weight: 300;
   padding-bottom: 60px;
 }
 @media only screen and (max-width: 600px) {
-  section .healthcare h2 {
+  section .healthcare h2, section .furniture h2 {
     text-align: center;
   }
 }
-section .healthcare .card-section {
+section .healthcare .card-section, section .furniture .card-section {
   display: flex;
   width: auto;
   height: auto;
@@ -189,7 +189,7 @@ section .healthcare .card-section {
   row-gap: 80px;
   flex-wrap: wrap;
 }
-section .healthcare .card-section .product-card {
+section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
   width: 15vw;
   height: auto;
   background-color: #FFDAC6;
@@ -197,21 +197,21 @@ section .healthcare .card-section .product-card {
   padding: 20px;
   border-radius: 8px;
 }
-section .healthcare .card-section .product-card .product-image {
+section .healthcare .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section .healthcare .card-section .product-card .product-image img {
+section .healthcare .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
   width: 16vw;
   height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 6px;
 }
-section .healthcare .card-section .product-card .icon {
+section .healthcare .card-section .product-card .icon, section .furniture .card-section .product-card .icon {
   width: 100%;
   height: auto;
   display: flex;
@@ -220,13 +220,13 @@ section .healthcare .card-section .product-card .icon {
   padding-top: 1px;
   padding-bottom: 10px;
 }
-section .healthcare .card-section .product-card .icon svg {
+section .healthcare .card-section .product-card .icon svg, section .furniture .card-section .product-card .icon svg {
   width: 25px;
   height: 25px;
   stroke: #7C6A0A;
 }
 @media only screen and (max-width: 1180px) {
-  section .healthcare .card-section {
+  section .healthcare .card-section, section .furniture .card-section {
     justify-content: center;
     align-items: center;
     width: auto;
@@ -237,12 +237,12 @@ section .healthcare .card-section .product-card .icon svg {
          column-gap: 70px;
     row-gap: 25px;
   }
-  section .healthcare .card-section .product-card {
+  section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
     width: 30vw;
   }
 }
 @media only screen and (max-width: 600px) {
-  section .healthcare .card-section {
+  section .healthcare .card-section, section .furniture .card-section {
     display: grid;
     grid-template-columns: 1px;
     width: auto;
@@ -253,26 +253,25 @@ section .healthcare .card-section .product-card .icon svg {
     margin-left: 20px;
     row-gap: 20px;
   }
-  section .healthcare .card-section h3 {
+  section .healthcare .card-section h3, section .furniture .card-section h3 {
     text-align: center;
   }
-  section .healthcare .card-section p {
+  section .healthcare .card-section p, section .furniture .card-section p {
     text-align: center;
     width: 70vw;
   }
-  section .healthcare .card-section .product-card {
+  section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
     width: 70vw;
     height: auto;
   }
-  section .healthcare .card-section .product-card .product-image {
+  section .healthcare .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
     width: 65vw;
     padding-left: 10px;
   }
-  section .healthcare .card-section .product-card .product-image img {
+  section .healthcare .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
     width: 100vw;
   }
 }
-
 .footer {
   background-color: #FA9500;
   width: 100%;
