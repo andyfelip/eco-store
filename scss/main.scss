@@ -300,16 +300,18 @@ section {
                 }
 
             }
+
             @media only screen and (max-width: 600px) {
                 display: grid;
-                grid-template-columns: 1px;
+                grid-auto-flow: column;
+                overflow-x: scroll;
                 width: auto;
                 height: auto;
                 justify-content: flex-start;
                 color: $text-primary-color;
                 padding: 20px;
                 margin-left: 20px;
-                row-gap: 20px;
+                row-gap: 10px;
 
                 h3 {
                     text-align: center;
@@ -348,8 +350,31 @@ section {
 
     }
 
-    .furniture{
+    .furniture {
         @extend .healthcare;
+
+        .card-section {
+
+            .product-card {
+                background-color: $color-terciary;
+                color: $color-primary;
+
+                .product-image{
+                    img{
+                        object-fit: cover;
+                        height: auto;
+                    }
+                }
+
+                .icon {
+                    svg {
+                        stroke: $color-primary;
+                    }
+                }
+
+
+            }
+        }
     }
 
 }

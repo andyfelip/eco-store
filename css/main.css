@@ -244,14 +244,15 @@ section .healthcare .card-section .product-card .icon svg, section .furniture .c
 @media only screen and (max-width: 600px) {
   section .healthcare .card-section, section .furniture .card-section {
     display: grid;
-    grid-template-columns: 1px;
+    grid-auto-flow: column;
+    overflow-x: scroll;
     width: auto;
     height: auto;
     justify-content: flex-start;
     color: #7C6A0A;
     padding: 20px;
     margin-left: 20px;
-    row-gap: 20px;
+    row-gap: 10px;
   }
   section .healthcare .card-section h3, section .furniture .card-section h3 {
     text-align: center;
@@ -272,6 +273,19 @@ section .healthcare .card-section .product-card .icon svg, section .furniture .c
     width: 100vw;
   }
 }
+section .furniture .card-section .product-card {
+  background-color: #BABD8D;
+  color: rgb(255, 239, 231);
+}
+section .furniture .card-section .product-card .product-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+section .furniture .card-section .product-card .icon svg {
+  stroke: rgb(255, 239, 231);
+}
+
 .footer {
   background-color: #FA9500;
   width: 100%;
