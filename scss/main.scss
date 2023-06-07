@@ -11,6 +11,22 @@ $font-stack: 'IBM Plex Sans',
 $paragraph-size: 1.5em;
 
 
+@mixin flexCenter($direction, $content: null, $align: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+        cursor: pointer;
+    }
+}
+
+
 //Definicion de estilos del body de la pagina
 
 body {
@@ -27,9 +43,7 @@ body {
 .navbar {
     background-color: $color-primary;
     width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
     color: $text-primary-color;
     padding: 20px;
 
@@ -43,33 +57,29 @@ body {
     }
 
     .icons {
-        display: flex;
-        flex-direction: row;
+
+        @include flexCenter(row, space-around, center);
         gap: 10px;
         margin-right: 90px;
 
+        @include buttonStyle();
 
-        button {
-            background: none;
-            border-style: none;
-            cursor: pointer;
-
-            svg {
-                stroke: $text-primary-color;
-                width: 36px;
-                height: 36px;
-            }
+        svg {
+            stroke: $text-primary-color;
+            width: 36px;
+            height: 36px;
         }
+
     }
 
     @media only screen and (max-width: 600px) {
 
-        display: flex;
-        gap: 20px;
-        width: 100vw;
-        justify-content: end;
+        @include flexCenter(row, center);
+        column-gap: 30px;
+        width: auto;
         color: $text-primary-color;
         padding: 20px;
+        margin: 0 auto;
 
     }
 
@@ -77,20 +87,20 @@ body {
 
 article {
 
+    @include flexCenter(row, space-around, center);
     width: auto;
     background-color: $color-primary;
     color: $text-primary-color;
     padding-left: 30px;
     padding-right: 30px;
-    display: flex;
     gap: 10px;
     padding-top: 80px;
-    justify-content: space-around;
-    column-gap: 200px;
+    column-gap: 100px;
 
     .impact-section {
-        display: flex;
-        flex-direction: column;
+
+
+        @include flexCenter(column, space-around, flex-start);
         row-gap: 40px;
 
         h1 {
@@ -104,7 +114,10 @@ article {
             font-size: $paragraph-size;
         }
 
+        @include buttonStyle();
+
         button {
+
             background-color: $color-footer-container;
             width: 261px;
             height: 73px;
@@ -112,12 +125,15 @@ article {
             color: $color-primary;
             font-size: 22.99px;
             padding: 20px;
-            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
 
     .image-section {
         background-color: $color-primary;
+
 
         img {
             width: 25vw;
@@ -129,7 +145,7 @@ article {
 
     @media only screen and (max-width: 600px) {
 
-        width: 100vw;
+        width: auto;
         height: auto;
         display: inline-block;
         padding-left: 20px;
@@ -160,6 +176,8 @@ article {
 
 
         }
+
+
     }
 
     @media only screen and (max-width: 800px) {
@@ -202,9 +220,6 @@ article {
 
 }
 
-
-
-
 //definicion estilos de los main section 
 
 section {
@@ -233,11 +248,9 @@ section {
         }
 
         .card-section {
-            display: flex;
+            @include flexCenter(row, center, center);
             width: auto;
             height: auto;
-            justify-content: center;
-            align-items: center;
             column-gap: 200px;
             row-gap: 80px;
             flex-wrap: wrap;
@@ -249,14 +262,15 @@ section {
                 color: $text-primary-color;
                 padding: 20px;
                 border-radius: 8px;
+                &:hover{
+                    transform: scale(1.1);
+                }
 
 
                 .product-image {
                     width: 100%;
                     height: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flexCenter(row, center, center);
 
                     img {
                         width: 16vw;
@@ -269,8 +283,7 @@ section {
                 .icon {
                     width: 100%;
                     height: auto;
-                    display: flex;
-                    justify-content: flex-end;
+                    @include flexCenter(row, flex-end, center);
                     padding-left: 15px;
                     padding-top: 1px;
                     padding-bottom: 10px;
@@ -301,7 +314,7 @@ section {
 
             }
 
-            @media only screen and (max-width: 600px) {
+            @media only screen and (min-width: 200px) and (max-width:700px) {
                 display: grid;
                 grid-auto-flow: column;
                 overflow-x: scroll;
@@ -337,19 +350,8 @@ section {
                     }
                 }
             }
-
-
-
-
-
-
         }
-
-
-
-
     }
-
     .furniture {
         @extend .healthcare;
 
@@ -359,12 +361,7 @@ section {
                 background-color: $color-terciary;
                 color: $color-primary;
 
-                .product-image{
-                    img{
-                        object-fit: cover;
-                        height: auto;
-                    }
-                }
+
 
                 .icon {
                     svg {
@@ -377,6 +374,163 @@ section {
         }
     }
 
+}
+
+.about-us {
+    padding-bottom: 60px;
+
+    h2 {
+        font-weight: bold;
+        padding-bottom: 60px;
+        font-style: normal;
+    }
+
+    .mision-section {
+        @include flexCenter(row, space-around, center);
+
+        .earth {
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            width: 30vw;
+            color: #E86424;
+
+            img {
+                object-fit: contain;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: $paragraph-size;
+                text-align: center;
+            }
+        }
+
+        .innovation {
+            @extend .earth;
+        }
+
+        @media only screen and (min-width:200px) and (max-width:700px) {
+            display: inline-block;
+            row-gap: 10px;
+            width: auto;
+            padding: 20px;
+
+            .earth {
+
+                display: inline-flex;
+                flex-direction: column;
+                margin-right: 80px;
+                margin-bottom: 30px;
+
+                img {
+                    width: 30vw;
+                    height: auto;
+                    object-fit: contain;
+                    padding-left: 80px;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    width: 80vw;
+
+                }
+            }
+
+        }
+
+        @media only screen and (min-width:700px) and (max-width:1024px) {
+
+            @include flexCenter(row, space-around, flex-start);
+            width: auto;
+            height: auto;
+            padding: 10px;
+
+            .earth {
+
+                display: inline-flex;
+                flex-direction: column;
+                column-gap: 6px;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 20vw;
+                    height: auto;
+                    background-size: cover;
+                    background-position: center;
+
+                }
+
+                p {
+                    width: 40vw;
+                }
+
+
+            }
+
+
+        }
+
+
+
+
+    }
+
+    @media only screen and (min-width:200px) and (max-width:700px) {
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+}
+
+.gallery {
+    padding-bottom: 60px;
+
+    h2 {
+        font-weight: bold;
+        padding-bottom: 60px;
+        font-style: normal;
+    }
+
+    .galery-images {
+
+        @include flexCenter(row,space-around,center);
+        
+        img{
+            width: 30vw;
+            height: 75vh;
+            border-radius: 16px;
+            object-fit: cover;
+            object-position: 5px 35%;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+        @media only screen and (min-width: 200px) and (max-width:700px) {
+
+            display: grid;
+            grid-auto-flow: column;
+            overflow-x: scroll;
+            row-gap: 10px;
+            width: auto;
+            height: auto;
+            justify-content: flex-start;
+
+            img{
+                width: 40vw;
+            }
+        }
+    }
 }
 
 //definicion de estilos del footer
