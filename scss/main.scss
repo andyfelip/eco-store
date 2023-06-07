@@ -35,7 +35,6 @@ body {
     background-color: $color-primary;
     font-family: $font-stack;
 
-
 }
 
 //definicion de estilos del navbar de la pagina web
@@ -72,15 +71,13 @@ body {
 
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 200px) and (max-width:700px) {
 
-        @include flexCenter(row, center);
+        @include flexCenter(row, flex-end, center);
         column-gap: 30px;
-        width: auto;
+        width: 100vw;
         color: $text-primary-color;
         padding: 20px;
-        margin: 0 auto;
-
     }
 
 }
@@ -96,6 +93,7 @@ article {
     gap: 10px;
     padding-top: 80px;
     column-gap: 100px;
+
 
     .impact-section {
 
@@ -125,7 +123,8 @@ article {
             color: $color-primary;
             font-size: 22.99px;
             padding: 20px;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
             }
         }
@@ -143,7 +142,7 @@ article {
         }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 200px) and (max-width:700px) {
 
         width: auto;
         height: auto;
@@ -180,7 +179,7 @@ article {
 
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (min-width: 700px) and (max-width:1024px) {
 
         width: 100vw;
         height: auto;
@@ -262,7 +261,8 @@ section {
                 color: $text-primary-color;
                 padding: 20px;
                 border-radius: 8px;
-                &:hover{
+
+                &:hover {
                     transform: scale(1.1);
                 }
 
@@ -297,7 +297,7 @@ section {
                 }
             }
 
-            @media only screen and (max-width: 1180px) {
+            @media only screen and (min-width: 700px) and (max-width:1024px) {
 
                 justify-content: center;
                 align-items: center;
@@ -352,6 +352,7 @@ section {
             }
         }
     }
+
     .furniture {
         @extend .healthcare;
 
@@ -503,40 +504,115 @@ section {
 
     .galery-images {
 
-        @include flexCenter(row,space-around,center);
-        
-        img{
+        @include flexCenter(row, space-around, center);
+
+        img {
             width: 30vw;
             height: 75vh;
             border-radius: 16px;
             object-fit: cover;
             object-position: 5px 35%;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
             }
         }
-        
+
         @media only screen and (min-width: 200px) and (max-width:700px) {
 
             display: grid;
             grid-auto-flow: column;
             overflow-x: scroll;
-            row-gap: 10px;
+            gap: 30px;
             width: auto;
             height: auto;
             justify-content: flex-start;
 
-            img{
-                width: 40vw;
+            img {
+                width: 80vw;
             }
         }
+    }
+}
+
+//Css de localizacion 
+
+.location {
+
+    $text-color: #E86424;
+    color: $text-color;
+
+    h2 {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    .map {
+        @include flexCenter(row, center, center);
+        padding-bottom: 50px;
+
+        @media only screen and (min-width:200px) and (max-width:700px) {
+
+
+            img {
+                width: 85vw;
+                height: 50vh;
+                object-fit: cover;
+                background-size: contain;
+            }
+        }
+
+        @media only screen and (min-width:700px) and (max-width:1024px) {
+            img {
+                width: 85vw;
+                padding-left: 40px;
+                height: 50vh;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+
+    h3,
+    p {
+        font-size: $paragraph-size;
+
     }
 }
 
 //definicion de estilos del footer
 
 .footer {
+
+    h3 {
+
+        font-size: $paragraph-size;
+    }
+
     background-color: $color-footer-container;
-    width: 100%;
-    height: 461px;
+    width: 100vw;
+    height: auto;
+    padding: 40px;
+    color: white;
+
+    .social-media {
+
+        @include flexCenter(row, center, center);
+        gap: 20px;
+        padding-bottom: 20px;
+
+        img {
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width:200px) and (max-width:700px) {
+            padding-top: 40px;
+        }
+
+
+
+    }
+
 }

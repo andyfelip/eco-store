@@ -41,17 +41,17 @@ body {
   width: 36px;
   height: 36px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 200px) and (max-width: 700px) {
   .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     -moz-column-gap: 30px;
          column-gap: 30px;
-    width: auto;
+    width: 100vw;
     color: #7C6A0A;
     padding: 20px;
-    margin: 0 auto;
   }
 }
 
@@ -111,7 +111,7 @@ article .image-section img {
   border-radius: 19px;
   cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 200px) and (max-width: 700px) {
   article {
     width: auto;
     height: auto;
@@ -140,7 +140,7 @@ article .image-section img {
     background-clip: border-box;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
   article {
     width: 100vw;
     height: auto;
@@ -249,7 +249,7 @@ section .healthcare .card-section .product-card .icon svg, section .furniture .c
   height: 25px;
   stroke: #7C6A0A;
 }
-@media only screen and (max-width: 1180px) {
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
   section .healthcare .card-section, section .furniture .card-section {
     justify-content: center;
     align-items: center;
@@ -427,18 +427,80 @@ section .furniture .card-section .product-card .icon svg {
     display: grid;
     grid-auto-flow: column;
     overflow-x: scroll;
-    row-gap: 10px;
+    gap: 30px;
     width: auto;
     height: auto;
     justify-content: flex-start;
   }
   .gallery .galery-images img {
-    width: 40vw;
+    width: 80vw;
   }
+}
+
+.location {
+  color: #E86424;
+}
+.location h2 {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  .location .map img {
+    width: 85vw;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-size: contain;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .location .map img {
+    width: 85vw;
+    padding-left: 40px;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+.location h3,
+.location p {
+  font-size: 1.5em;
 }
 
 .footer {
   background-color: #FA9500;
-  width: 100%;
-  height: 461px;
+  width: 100vw;
+  height: auto;
+  padding: 40px;
+  color: white;
+}
+.footer h3 {
+  font-size: 1.5em;
+}
+.footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.footer .social-media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  .footer .social-media {
+    padding-top: 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
